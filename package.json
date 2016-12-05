@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "cp dataset.sqlite test/testdb.sqlite && npm run mocha && semistandard",
-    "start": "node src/",
+    "start": "cp dataset.sqlite /tmp && chmod 777 /tmp/dataset.sqlite && node src/",
     "mocha": "NODE_ENV=test mocha test/ --recursive",
     "dev": "nodemon",
     "coverage": "nyc npm test",

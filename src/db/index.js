@@ -17,7 +17,7 @@ function setupDatabase () {
     host: 'localhost',
     dialect: 'sqlite',
     logging: msg => app.logger.debug(msg),
-    storage: 'dataset.sqlite'
+    storage: '/tmp/dataset.sqlite'
   };
 
   if (process.env.NODE_ENV === 'test') {
